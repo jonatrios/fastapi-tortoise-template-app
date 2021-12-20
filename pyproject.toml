@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fastapi-tortoise"
+version = "0.1.0"
+description = "Simple REST-API template with fastapi, tortorise-orm and aerich migration without headache"
+authors = ["jonatrios <jonathanrios@live.com.ar>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+
+
+[tool.aerich]
+tortoise_orm = "app_factory.migration_config"
+location = "./migrations"
+src_folder = "./."
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
