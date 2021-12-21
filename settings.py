@@ -1,7 +1,7 @@
 from decouple import config
 from pydantic import BaseSettings
 
-DB_MODELS = ["apps.user.models", 'apps.products.models', 'aerich.models']
+DB_MODELS = ["apps.user.models", 'apps.products.models', 'aerich.models', 'apps.authtoken.models']
 SQLITE_DB_URL = f"postgres://postgres:{config('POSTGRES_PASSWORD')}@localhost:5432/app"
 
 

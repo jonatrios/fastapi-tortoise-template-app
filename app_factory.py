@@ -37,8 +37,9 @@ def init_routers(app: FastAPI):
     """
     from apps.user.api_views import user
     from apps.products.api_view import products
+    from apps.authtoken.api_views import authtoken
 
-    routers = [user,products]
+    routers = [user,products, authtoken]
 
     for router in routers:
         app.include_router(router)

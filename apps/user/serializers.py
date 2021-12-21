@@ -12,6 +12,10 @@ class UserSerializerIn(BaseModel):
     name : str
     last_name : str
     date_of_birth : str
+    password : str
 
     def parse_date(self, value):
         self.date_of_birth = datetime.strptime(value, '%d/%m/%Y').strftime('%Y-%m-%d')
+
+class UserDeleteResponse(BaseModel):
+    msg : str = 'user id 10 has been deleted succesfuly'

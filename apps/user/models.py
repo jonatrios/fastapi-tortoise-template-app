@@ -5,6 +5,7 @@ from tortoise import fields
 
 class UserModel(Model):
     username = fields.CharField(unique=True, null=False, blank=False, max_length=50)
+    password = fields.CharField(max_length=200, null=True, blank=False)
     name = fields.CharField(max_length=255)
     last_name = fields.CharField(max_length=255)
     is_active = fields.BooleanField(default=True)
